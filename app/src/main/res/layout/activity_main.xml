@@ -22,12 +22,30 @@
             android:src="@drawable/exit" />
 
         <Button
+            android:id="@+id/button_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/margin"
             android:layout_marginTop="@dimen/half_margin"
             android:text="@string/button_start" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/half_margin"
+            android:text="@string/result"
+            android:textSize="@dimen/title_font_size" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/half_margin"
+            android:text="0 out of 10"
+            android:textSize="@dimen/title_font_size" />
 
         <TextView
             android:layout_width="wrap_content"
