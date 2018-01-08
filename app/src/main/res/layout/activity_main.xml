@@ -19,7 +19,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/margin"
-            android:src="@drawable/exit" />
+            android:src="@drawable/dragon" />
 
         <Button
             android:id="@+id/button_start"
@@ -30,11 +30,18 @@
             android:layout_marginTop="@dimen/half_margin"
             android:text="@string/button_start" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
             android:layout_marginTop="@dimen/half_margin"
+            android:layout_gravity="center_horizontal"
             android:text="@string/result"
             android:textSize="@dimen/title_font_size" />
 
@@ -44,8 +51,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
             android:layout_marginTop="@dimen/half_margin"
-            android:text="0 out of 10"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/result_game"
             android:textSize="@dimen/title_font_size" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
