@@ -29,6 +29,8 @@
             android:layout_marginBottom="@dimen/margin"
             android:layout_marginTop="@dimen/half_margin"
             android:text="@string/button_start"
+            android:background="@color/colorAccent"
+            android:shadowColor="@color/lightPrimary"
             android:onClick="startQuiz"/>
 
         <LinearLayout
