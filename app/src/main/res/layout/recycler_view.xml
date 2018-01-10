@@ -7,13 +7,6 @@
     android:orientation="vertical"
     tools:context="com.sardegnaisoladicavalli.escapethisquiz.RecyclerActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#CCCCCC"
-        android:padding="3dp"
-        android:text="Horizontal Card List"
-        android:textSize="16sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"

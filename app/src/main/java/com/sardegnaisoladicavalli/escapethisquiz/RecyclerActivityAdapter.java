@@ -12,51 +12,43 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class RecyclerActivityAdapter extends RecyclerView.Adapter<RecyclerActivityAdapter.SubActivityViewHolder> {
+public class RecyclerActivityAdapter  extends RecyclerView.Adapter<RecyclerActivityAdapter.CardViewHolder> {
 
-    private ArrayList<String> mDataset;
-    public RecyclerActivityAdapter(ArrayList<String> mDataset) {
-        this.mDataset = mDataset;
-        inflater = null;
+    private List<SubActivityData> SubActivityData;
+
+    public RecyclerActivityAdapter(List<SubActivityData> contactList) {
+        this.SubActivityData = contactList;
     }
 
-    private final LayoutInflater inflater;
-    /*private List<SubActivityData> subActivityData;
-
-    public SubActivityAdapter(Context context, List<SubActivityData> subActivityData) {
-        inflater = LayoutInflater.from(context);
-        this.subActivityData = Collections.EMPTY_LIST;
-        this.subActivityData = subActivityData;
-    }*/
-
-
-    @Override
-    public SubActivityViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-        View view = inflater.inflate(R.layout.activity_quiz_card, parent, false);
-        view.setMinimumWidth(parent.getMeasuredWidth());
-        SubActivityViewHolder subActivityViewHolder = new SubActivityViewHolder(view);
-        return subActivityViewHolder;
-    }
-
-    @Override
-    public void onBindViewHolder(SubActivityViewHolder holder, int position) {
-        holder.mTitle.setText(mDataset.get(position));
-
-    }
 
     @Override
     public int getItemCount() {
-        return mDataset.size();
+        return SubActivityData.size();
     }
 
-    public class SubActivityViewHolder extends RecyclerView.ViewHolder {
+    @Override
+    public void onBindViewHolder(CardViewHolder cardViewHolder, int i) {
+        SubActivityData ci = SubActivityData.get(i);
+        cardViewHolder.vTitle.setText(ci.text);
+    }
 
-        TextView mTitle;
+    @Override
+    public CardViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View itemView = LayoutInflater.
+                from(viewGroup.getContext()).
+                inflate(R.layout.activity_quiz_card, viewGroup, false);
 
-        public SubActivityViewHolder(View itemView) {
-            super(itemView);
-            mTitle = (TextView) itemView.findViewById(R.id.card_text);
+        return new CardViewHolder(itemView);
+    }
+
+    public static class CardViewHolder extends RecyclerView.ViewHolder {
+
+        protected TextView vTitle;
+
+        public CardViewHolder(View v) {
+            super(v);
+
+            vTitle = (TextView) v.findViewById(R.id.card_text);
         }
     }
 }
