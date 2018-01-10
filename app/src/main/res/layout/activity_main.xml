@@ -31,7 +31,9 @@
             android:text="@string/button_start"
             android:background="@color/colorAccent"
             android:shadowColor="@color/lightPrimary"
-            android:onClick="startQuiz"/>
+            android:onClick="startQuiz"
+            android:textColor="@color/colorPrimaryDark"
+            android:shadowRadius="@android:integer/config_longAnimTime"/>
 
         <LinearLayout
             android:layout_width="match_parent"
