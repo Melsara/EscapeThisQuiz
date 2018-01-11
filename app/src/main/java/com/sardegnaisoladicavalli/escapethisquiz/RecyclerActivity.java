@@ -25,19 +25,24 @@ public class RecyclerActivity extends AppCompatActivity {
 
         RecyclerActivityAdapter ca = new RecyclerActivityAdapter(createList(30));
         recList.setAdapter(ca);
+        ca.notifyDataSetChanged();
+
     }
 
     private List<SubActivityData> createList(int size) {
 
-        List<SubActivityData> result = new ArrayList<SubActivityData>();
+        ArrayList<SubActivityData> aList = new ArrayList<SubActivityData>();
         for (int i=1; i <= size; i++) {
             SubActivityData ci = new SubActivityData();
             ci.text = SubActivityData.CARD_TEXT + i;
 
-            result.add(ci);
+            aList.add(ci);
+
 
         }
 
-        return result;
+
+        return aList;
     }
+
 }

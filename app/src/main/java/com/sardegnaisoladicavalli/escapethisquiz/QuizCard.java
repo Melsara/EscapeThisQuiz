@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 
 public class QuizCard extends AppCompatActivity {
 
@@ -13,6 +14,23 @@ public class QuizCard extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_card);
         Intent intent = getIntent();
 
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.card_answer1:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.card_answer2:
+                if (checked)
+                    // Ninjas rule
+                    break;
+        }
     }
 
 }
