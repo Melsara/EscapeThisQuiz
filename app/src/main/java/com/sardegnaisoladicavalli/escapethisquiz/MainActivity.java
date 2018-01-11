@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startQuiz (View view) {
-        Intent intent = new Intent(this, QuizCard.class);
+        Intent intent = new Intent(this, RecyclerActivity.class);
         startActivity(intent);
     }
 }
