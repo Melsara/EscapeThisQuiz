@@ -3,14 +3,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
-
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class RecyclerActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +21,11 @@ public class RecyclerActivity extends AppCompatActivity {
         llm.setOrientation(LinearLayoutManager.HORIZONTAL);
         recList.setLayoutManager(llm);
 
-        RecyclerActivityAdapter ca = new RecyclerActivityAdapter(createList(30));
+        RecyclerActivityAdapter ca = new RecyclerActivityAdapter(createList(6));
+        RecyclerActivityAdapter ql = new RecyclerActivityAdapter(setQuestions(5));
+        recList.setAdapter(ql);
         recList.setAdapter(ca);
+        ql.notifyDataSetChanged();
         ca.notifyDataSetChanged();
 
     }
@@ -41,8 +42,17 @@ public class RecyclerActivity extends AppCompatActivity {
 
         }
 
-
         return aList;
     }
 
-}
+
+    private List<SubActivityData> setQuestions(int size) {
+
+            SubActivityData ql = new SubActivityData();
+            ql.setQuestion();
+            return (List<SubActivityData>) ql;
+
+        }
+
+
+    }
