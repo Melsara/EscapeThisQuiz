@@ -1,41 +1,27 @@
 package com.sardegnaisoladicavalli.escapethisquiz;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Sara on 10/01/2018.
  */
 
-public class SubActivityData extends RecyclerActivity {
-    public static String q1;
-    public static String q2;
-    public static String q3;
-    public static String q4;
-    public static String q5;
+public class SubActivityData {
     protected String text;
+    protected String question;
+       protected String radioText1;
+    protected String radioText2;
+    protected String radioText3;
+    protected String radioText4;
+    protected int image;
     protected static final String CARD_TEXT = "card text";
 
-
-    public List setQuestion() {
-
-        ArrayList questionList = new ArrayList<SubActivityData>();
-        SubActivityData ql = new SubActivityData();
-        q1 = getString(R.string.question1);
-        q2 = getString(R.string.question2);
-        q3 = getString(R.string.question3);
-        q4 = getString(R.string.question4);
-        q5 = getString(R.string.question5);
-        questionList.add(ql);
-        questionList.add(q2);
-        questionList.add(q3);
-        questionList.add(q4);
-        questionList.add(q5);
-
-
-        return questionList;
-
-
+    public SubActivityData(String question, String text, String answer1, String answer2, String answer3, String answer4, int image) {
+        this.text = text;
+        this.question = question;
+        this.radioText1 = answer1;
+        this.radioText2 = answer2;
+        this.radioText3 = answer3;
+        this.radioText4 = answer4;
+        this.image = image;
     }
 
 }

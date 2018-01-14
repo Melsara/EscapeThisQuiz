@@ -13,6 +13,7 @@
     app:cardCornerRadius="@dimen/margin"
     tools:context="com.sardegnaisoladicavalli.escapethisquiz.QuizCard">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,6 +29,7 @@
             android:textSize="30sp" />
 
         <ImageView
+            android:id="@+id/card_image"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -55,6 +57,18 @@
                 android:onClick="onRadioButtonClicked"/>
 
             <RadioButton android:id="@+id/card_answer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="answer 2"
+            android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/card_answer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="answer 2"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/card_answer4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="answer 2"
