@@ -18,8 +18,9 @@
         </activity>
         <activity
             android:name=".QuizCard"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".RecyclerActivity"></activity>
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".RecyclerActivity" />
+        <activity android:name=".ResultCard"></activity>
     </application>
 
 </manifest>

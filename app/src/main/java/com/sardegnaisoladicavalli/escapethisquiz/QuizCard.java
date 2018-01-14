@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class QuizCard extends AppCompatActivity {
 
@@ -15,6 +18,7 @@ public class QuizCard extends AppCompatActivity {
         Intent intent = getIntent();
 
     }
+
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
@@ -31,6 +35,11 @@ public class QuizCard extends AppCompatActivity {
                     // Ninjas rule
                     break;
         }
+    }
+
+    public void onSubmitButtonClicked(View view) {
+        Intent intentSubmit = new Intent(this, ResultCard.class);
+        startActivity(intentSubmit);
     }
 
 }

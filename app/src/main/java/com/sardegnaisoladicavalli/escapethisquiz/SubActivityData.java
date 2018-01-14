@@ -7,7 +7,7 @@ package com.sardegnaisoladicavalli.escapethisquiz;
 public class SubActivityData {
     protected String text;
     protected String question;
-       protected String radioText1;
+    protected String radioText1;
     protected String radioText2;
     protected String radioText3;
     protected String radioText4;

@@ -28,6 +28,7 @@
             android:text="CARD 1"
             android:textSize="30sp" />
 
+
         <ImageView
             android:id="@+id/card_image"
             android:layout_width="match_parent"
@@ -65,16 +66,30 @@
             <RadioButton android:id="@+id/card_answer3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="answer 2"
+                android:text="answer 3"
                 android:onClick="onRadioButtonClicked"/>
 
             <RadioButton android:id="@+id/card_answer4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="answer 2"
+                android:text="answer 4"
                 android:onClick="onRadioButtonClicked"/>
 
         </RadioGroup>
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/half_margin"
+            android:text="Submit"
+            android:background="@color/colorAccent"
+            android:shadowColor="@color/lightPrimary"
+            android:onClick="onSubmitButtonClicked"
+            android:textColor="@color/colorPrimaryDark"
+            android:shadowRadius="@android:integer/config_longAnimTime"/>
 
     </LinearLayout>
 
