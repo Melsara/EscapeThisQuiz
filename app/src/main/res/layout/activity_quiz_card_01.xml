@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.sardegnaisoladicavalli.escapethisquiz.QuizCard"
+    android:layout_margin="@dimen/margin">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/card_text"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="CARD 1"
+                android:layout_gravity="center_horizontal"
+                android:textSize="30sp" />
+
+
+            <ImageView
+                android:id="@+id/card_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:layout_marginTop="@dimen/half_margin"
+                android:background="@color/colorAccent"
+                android:src="@drawable/dragon"/>
+
+
+            <TextView
+                android:id="@+id/card_question"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin"
+                android:text="QUESTION 1"
+                android:textSize="30sp" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/card_answer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="answer 1 " />
+
+                <RadioButton
+                    android:id="@+id/card_answer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/half_margin"
+
+                    android:text="answer 2" />
+
+                <RadioButton
+                    android:id="@+id/card_answer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/half_margin"
+
+                    android:text="answer 3" />
+
+                <RadioButton
+                    android:id="@+id/card_answer4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/half_margin"
+
+                    android:text="answer 4" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/button_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:shadowColor="@color/lightPrimary"
+                    android:shadowRadius="@android:integer/config_longAnimTime"
+                    android:text="Back"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/button_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/button_back"
+                    android:layout_toStartOf="@id/button_forward"
+                    android:layout_toEndOf="@id/button_back"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:shadowColor="@color/lightPrimary"
+                    android:shadowRadius="@android:integer/config_longAnimTime"
+                    android:text="Submit"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/button_forward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/button_submit"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:shadowColor="@color/lightPrimary"
+                    android:shadowRadius="@android:integer/config_longAnimTime"
+                    android:text="Next"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+</ScrollView>

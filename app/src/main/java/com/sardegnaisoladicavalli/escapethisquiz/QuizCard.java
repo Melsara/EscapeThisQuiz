@@ -9,7 +9,7 @@ public class QuizCard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_card);
+        setContentView(R.layout.activity_quiz_card_01);
         Intent intent = getIntent();
 
     }
