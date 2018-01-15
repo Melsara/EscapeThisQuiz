@@ -1,5 +1,7 @@
 package com.sardegnaisoladicavalli.escapethisquiz;
 
+import android.widget.Button;
+
 /**
  * Created by Sara on 10/01/2018.
  */
@@ -12,9 +14,11 @@ public class SubActivityData {
     protected String radioText3;
     protected String radioText4;
     protected int image;
+    protected int submit;
+
     protected static final String CARD_TEXT = "card text";
 
-    public SubActivityData(String question, String text, String answer1, String answer2, String answer3, String answer4, int image) {
+    public SubActivityData(String question, String text, String answer1, String answer2, String answer3, String answer4, int image, int submit) {
         this.text = text;
         this.question = question;
         this.radioText1 = answer1;
@@ -22,6 +26,7 @@ public class SubActivityData {
         this.radioText3 = answer3;
         this.radioText4 = answer4;
         this.image = image;
+        this.submit = submit;
     }
 
 }

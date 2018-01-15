@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+
 
 public class RecyclerActivity extends AppCompatActivity {
 
@@ -39,17 +42,13 @@ public class RecyclerActivity extends AppCompatActivity {
     private List<SubActivityData> createList() {
 
         ArrayList<SubActivityData> aList = new ArrayList<SubActivityData>(Arrays.<SubActivityData>asList(
-                new SubActivityData(getString(R.string.question1), "card 1","answer 11", "answer12", "answer13", "answer14", R.drawable.ic_launcher_background),
-                new SubActivityData(getString(R.string.question2), "card 2","answer 21", "answer22", "answer23", "answer24", R.drawable.ic_launcher_background),
-                new SubActivityData(getString(R.string.question3), "card 3","answer 31", "answer32", "answer33", "answer34", R.drawable.ic_launcher_background),
-                new SubActivityData(getString(R.string.question4), "card 4","answer 41", "answer42", "answer43", "answer44", R.drawable.ic_launcher_background),
-                new SubActivityData(getString(R.string.question5), "card 5","answer 51", "answer52", "answer53", "answer54", R.drawable.ic_launcher_background)
+                new SubActivityData(getString(R.string.question1), "card 1","answer 11", "answer12", "answer13", "answer14", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).GONE),
+                new SubActivityData(getString(R.string.question2), "card 2","answer 21", "answer22", "answer23", "answer24", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).GONE),
+                new SubActivityData(getString(R.string.question3), "card 3","answer 31", "answer32", "answer33", "answer34", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).GONE),
+                new SubActivityData(getString(R.string.question4), "card 4","answer 41", "answer42", "answer43", "answer44", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).GONE),
+                new SubActivityData(getString(R.string.question5), "card 5","answer 51", "answer52", "answer53", "answer54", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).VISIBLE)
 
         ));
-
-/*        ArrayList<SubActivityResult> bList = new ArrayList<SubActivityResult>(Arrays.<SubActivityResult>asList(
-                new SubActivityResult("Your score is", 1, "out of", 5)
-        ));*/
 
 
         return aList;

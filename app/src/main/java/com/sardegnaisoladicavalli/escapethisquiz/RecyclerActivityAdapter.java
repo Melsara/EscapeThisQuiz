@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -12,6 +13,7 @@ import java.util.List;
 public class RecyclerActivityAdapter  extends RecyclerView.Adapter<RecyclerActivityAdapter.CardViewHolder> {
 
     private List<SubActivityData> SubActivityData;
+    public int size;
 
     public RecyclerActivityAdapter(List<SubActivityData> contactList) {
         this.SubActivityData = contactList;
@@ -20,7 +22,8 @@ public class RecyclerActivityAdapter  extends RecyclerView.Adapter<RecyclerActiv
 
     @Override
     public int getItemCount() {
-        return SubActivityData.size();
+        SubActivityData.size();
+        return size;
     }
 
     @Override
@@ -33,6 +36,8 @@ public class RecyclerActivityAdapter  extends RecyclerView.Adapter<RecyclerActiv
         cardViewHolder.answer3.setText(ci.radioText3);
         cardViewHolder.answer4.setText(ci.radioText4);
         cardViewHolder.image.setImageResource(ci.image);
+        cardViewHolder.submit.setVisibility(View.VISIBLE);
+
     }
 
     @Override
@@ -52,8 +57,9 @@ public class RecyclerActivityAdapter  extends RecyclerView.Adapter<RecyclerActiv
         protected RadioButton answer2;
         protected RadioButton answer3;
         protected RadioButton answer4;
-
         protected ImageView image;
+        protected Button submit;
+
 
         public CardViewHolder(View v) {
             super(v);
@@ -65,6 +71,7 @@ public class RecyclerActivityAdapter  extends RecyclerView.Adapter<RecyclerActiv
             answer3=v.findViewById(R.id.card_answer3);
             answer4=v.findViewById(R.id.card_answer4);
             image=v.findViewById(R.id.card_image);
+            submit=v.findViewById(R.id.button_submit);
         }
     }
 }

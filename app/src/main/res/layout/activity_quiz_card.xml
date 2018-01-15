@@ -89,7 +89,8 @@
             android:shadowColor="@color/lightPrimary"
             android:onClick="onSubmitButtonClicked"
             android:textColor="@color/colorPrimaryDark"
-            android:shadowRadius="@android:integer/config_longAnimTime"/>
+            android:shadowRadius="@android:integer/config_longAnimTime"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
