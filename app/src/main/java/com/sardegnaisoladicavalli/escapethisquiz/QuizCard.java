@@ -19,27 +19,4 @@ public class QuizCard extends AppCompatActivity {
 
     }
 
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.card_answer1:
-                if (checked)
-                    // Pirates are the best
-                    break;
-            case R.id.card_answer2:
-                if (checked)
-                    // Ninjas rule
-                    break;
-        }
-    }
-
-    public void onSubmitButtonClicked(View view) {
-        Intent intentSubmit = new Intent(this, ResultCard.class);
-        startActivity(intentSubmit);
-    }
-
 }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.RadioButton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,6 +53,28 @@ public class RecyclerActivity extends AppCompatActivity {
 
 
         return aList;
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.card_answer1:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.card_answer2:
+                if (checked)
+                    // Ninjas rule
+                    break;
+        }
+    }
+
+    public void onSubmitButtonClicked(View view) {
+        Intent intentSubmit = new Intent(this, ResultCard.class);
+        startActivity(intentSubmit);
     }
 
 }
