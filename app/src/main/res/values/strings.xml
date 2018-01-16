@@ -6,4 +6,29 @@
     <string name="result">Your result is</string>
     <string name="result_game">0 out of 10</string>
     <string name="title_activity_quiz_card">Quiz</string>
-</resources>
+    <string name="question1">Solve the cryptogram</string>
+    <string name="question2">Solve the equation</string>
+    <string name="question3">Find the values</string>
+    <string name="question4">What is this?</string>
+    <string name="question5">Find the word</string>
+	<string name="answer11">Answer 11</string>
+	<string name="answer12">Answer 12</string>
+	<string name="answer13">Answer 13</string>
+	<string name="answer14">Answer 14</string>
+	<string name="answer21">Answer 21</string>
+	<string name="answer22">Answer 22</string>
+	<string name="answer23">Answer 23</string>
+	<string name="answer24">Answer 24</string>
+	<string name="answer31">Answer 31</string>
+	<string name="answer32">Answer 32</string>
+	<string name="answer33">Answer 33</string>
+	<string name="answer34">Answer 34</string>
+	<string name="answer41">Answer 41</string>
+	<string name="answer42">Answer 42</string>
+	<string name="answer43">Answer 43</string>
+	<string name="answer44">Answer 44</string>
+	<string name="answer51">Answer 51</string>
+	<string name="answer52">Answer 52</string>
+	<string name="answer53">Answer 53</string>
+	<string name="answer54">Answer 54</string>
+	</resources>
