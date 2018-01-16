@@ -6,6 +6,11 @@
     <string name="result">Your result is</string>
     <string name="result_game">0 out of 10</string>
     <string name="title_activity_quiz_card">Quiz</string>
+	<string name="text1">Question 1/5</string>
+	<string name="text2">Question 2/5</string>
+	<string name="text3">Question 3/5</string>
+	<string name="text4">Question 4/5</string>
+	<string name="text5">Question 5/5</string>
     <string name="question1">Solve the cryptogram</string>
     <string name="question2">Solve the equation</string>
     <string name="question3">Find the values</string>
