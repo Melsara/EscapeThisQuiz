@@ -36,4 +36,7 @@
 	<string name="answer52">Answer 52</string>
 	<string name="answer53">Answer 53</string>
 	<string name="answer54">Answer 54</string>
-	</resources>
+	<string name="button_Back">Back</string>
+	<string name="button_Next">Next</string>
+	<string name="button_Submit">Submit</string>
+</resources>

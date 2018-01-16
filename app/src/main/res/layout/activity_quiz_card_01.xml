@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    tools:context="com.sardegnaisoladicavalli.escapethisquiz.QuizCard"
+    tools:context="com.sardegnaisoladicavalli.escapethisquiz.QuizCard01"
     android:layout_margin="@dimen/margin">
 
         <LinearLayout
@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="CARD 1"
+                android:text="@string/text1"
                 android:layout_gravity="center_horizontal"
                 android:textSize="30sp" />
 
@@ -41,7 +41,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:layout_marginTop="@dimen/margin"
-                android:text="QUESTION 1"
+                android:text="@string/question1"
                 android:textSize="30sp" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -54,32 +54,32 @@
                     android:id="@+id/card_answer1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="answer 1 " />
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/answer11" />
 
                 <RadioButton
                     android:id="@+id/card_answer2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/half_margin"
-
-                    android:text="answer 2" />
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/answer12" />
 
                 <RadioButton
                     android:id="@+id/card_answer3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/half_margin"
-
-                    android:text="answer 3" />
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/answer13"/>
 
                 <RadioButton
                     android:id="@+id/card_answer4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/half_margin"
-
-                    android:text="answer 4" />
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/answer14" />
 
             </RadioGroup>
 
@@ -98,7 +98,7 @@
                     android:layout_weight="1"
                     android:background="@color/colorAccent"
                     android:gravity="center"
-                    android:text="Back"
+                    android:text="@string/button_Back"
                     android:layout_marginRight="@dimen/margin"
                     android:textColor="@color/colorPrimaryDark"
                     android:visibility="invisible" />
@@ -111,7 +111,7 @@
                     android:layout_centerHorizontal="true"
                     android:background="@color/colorAccent"
                     android:gravity="center"
-                    android:text="Submit"
+                    android:text="@string/button_Submit"
                     android:textColor="@color/colorPrimaryDark"
                     android:visibility="invisible" />
 
@@ -123,7 +123,8 @@
                     android:background="@color/colorAccent"
                     android:layout_marginLeft="@dimen/margin"
                     android:gravity="center"
-                    android:text="Next"
+                    android:text="@string/button_Next"
+                    android:onClick="onNextButtonClicked"
                     android:textColor="@color/colorPrimaryDark"
                     android:visibility="visible" />
 

@@ -9,7 +9,6 @@ import android.widget.EditText;
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startQuiz (View view) {
-        Intent intent = new Intent(this, QuizCard.class);
+        Intent intent = new Intent(this, QuizCard01.class);
         startActivity(intent);
     }
 }

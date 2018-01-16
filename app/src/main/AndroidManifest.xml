@@ -17,9 +17,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QuizCard"
-            android:parentActivityName=".MainActivity">
+            android:name=".QuizCard01"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QuizCard02"
+            android:parentActivityName=".QuizCard01">
+            >
         </activity>
+        <activity android:name=".QuizCard03"></activity>
     </application>
 
 </manifest>
