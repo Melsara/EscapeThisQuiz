@@ -42,11 +42,11 @@ public class RecyclerActivity extends AppCompatActivity {
     private List<SubActivityData> createList() {
 
         ArrayList<SubActivityData> aList = new ArrayList<SubActivityData>(Arrays.<SubActivityData>asList(
-                new SubActivityData(getString(R.string.question1), "card 1","answer 11", "answer12", "answer13", "answer14", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).GONE),
-                new SubActivityData(getString(R.string.question2), "card 2","answer 21", "answer22", "answer23", "answer24", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).GONE),
-                new SubActivityData(getString(R.string.question3), "card 3","answer 31", "answer32", "answer33", "answer34", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).GONE),
-                new SubActivityData(getString(R.string.question4), "card 4","answer 41", "answer42", "answer43", "answer44", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).GONE),
-                new SubActivityData(getString(R.string.question5), "card 5","answer 51", "answer52", "answer53", "answer54", R.drawable.ic_launcher_background, findViewById(R.id.button_submit).VISIBLE)
+                new SubActivityData(getString(R.string.question1), "Question 1/5", getString(R.string.answer11), getString(R.string.answer12), getString(R.string.answer13), getString(R.string.answer14), R.drawable.ic_launcher_background, View.GONE),
+                new SubActivityData(getString(R.string.question2), "Question 2/5", getString(R.string.answer21), getString(R.string.answer22), getString(R.string.answer23), getString(R.string.answer24), R.drawable.ic_launcher_background, View.GONE),
+                new SubActivityData(getString(R.string.question3), "Question 3/5", getString(R.string.answer31), getString(R.string.answer32), getString(R.string.answer33), getString(R.string.answer34), R.drawable.ic_launcher_background, View.GONE),
+                new SubActivityData(getString(R.string.question4), "Question 4/5", getString(R.string.answer41), getString(R.string.answer42), getString(R.string.answer43), getString(R.string.answer44), R.drawable.ic_launcher_background, View.GONE),
+                new SubActivityData(getString(R.string.question5), "Question 5/5", getString(R.string.answer51), getString(R.string.answer52), getString(R.string.answer53), getString(R.string.answer54), R.drawable.ic_launcher_background, View.VISIBLE)
 
         ));
 
