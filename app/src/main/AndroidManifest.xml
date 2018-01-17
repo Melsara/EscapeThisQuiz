@@ -24,7 +24,10 @@
             android:parentActivityName=".QuizCard01">
             >
         </activity>
-        <activity android:name=".QuizCard03"></activity>
+        <activity android:name=".QuizCard03" />
+        <activity android:name=".QuizCard04" />
+        <activity android:name=".QuizCard05" />
+        <activity android:name=".Result"></activity>
     </application>
 
 </manifest>

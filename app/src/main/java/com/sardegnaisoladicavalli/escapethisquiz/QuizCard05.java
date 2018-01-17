@@ -6,22 +6,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 
-public class QuizCard03 extends AppCompatActivity {
+public class QuizCard05 extends AppCompatActivity {
 
-    public int quizResult3 = 0;
+    public int quizResult5 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_card_03);
+        setContentView(R.layout.activity_quiz_card_05);
         Intent intent = getIntent();
 
     }
 
     public int gotRightAnswer() {
 
-        quizResult3 = quizResult3 + 1;
-        return quizResult3;
+        quizResult5 = quizResult5 + 1;
+        return quizResult5;
 
     }
 
@@ -34,16 +34,16 @@ public class QuizCard03 extends AppCompatActivity {
             case R.id.card_answer1:
                 if (checked)
 
-                    gotRightAnswer();
-
                     break;
             case R.id.card_answer2:
                 if (checked)
 
-                    break;
+                break;
 
             case R.id.card_answer3:
                 if (checked)
+
+                    gotRightAnswer();
 
                     break;
 
@@ -52,17 +52,17 @@ public class QuizCard03 extends AppCompatActivity {
 
 
 
-                break;
+                    break;
         }
     }
 
     public void onNextButtonClicked (View view) {
-        Intent intent = new Intent(this, QuizCard04.class);
+        Intent intent = new Intent(this, Result.class);
         startActivity(intent);
     }
 
     public void onBackButtonClicked(View view) {
-        Intent intent = new Intent(this, QuizCard02.class);
+        Intent intent = new Intent(this, QuizCard04.class);
         startActivity(intent);
     }
 

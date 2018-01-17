@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sardegnaisoladicavalli.escapethisquiz.QuizCard05"
+    android:layout_margin="@dimen/margin">
+
+
+        <TextView
+            android:id="@+id/result_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:text="@string/result_title"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:id="@+id/result_score">
+
+        <TextView
+            android:id="@+id/result_actualRes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin"
+            android:text="0"
+            android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/result_outOf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/result_outOf"
+                android:gravity="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/card_question"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin"
+                android:text="5"
+                android:gravity="center"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_margin="@dimen/margin"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="@string/button_restart"
+                android:onClick="onRestartButtonClicked"
+                android:textColor="@color/colorPrimaryDark"
+                android:visibility="visible" />
+
+</LinearLayout>
+

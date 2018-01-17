@@ -39,4 +39,7 @@
 	<string name="button_Back">Back</string>
 	<string name="button_Next">Next</string>
 	<string name="button_Submit">Submit</string>
+	<string name="result_title">Your Result</string>
+    <string name="result_outOf">out of</string>
+    <string name="button_restart">Restart</string>
 </resources>

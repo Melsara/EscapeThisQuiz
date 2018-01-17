@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    tools:context="com.sardegnaisoladicavalli.escapethisquiz.QuizCard03"
+    tools:context="com.sardegnaisoladicavalli.escapethisquiz.QuizCard05"
     android:layout_margin="@dimen/margin">
 
     <LinearLayout
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/text3"
+            android:text="@string/text5"
             android:layout_gravity="center_horizontal"
             android:textSize="30sp" />
 
@@ -41,7 +41,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:layout_marginTop="@dimen/margin"
-            android:text="@string/question3"
+            android:text="@string/question5"
             android:textSize="30sp" />
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onRadioButtonClicked"
-                android:text="@string/answer31" />
+                android:text="@string/answer51" />
 
             <RadioButton
                 android:id="@+id/card_answer2"
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/half_margin"
                 android:onClick="onRadioButtonClicked"
-                android:text="@string/answer32" />
+                android:text="@string/answer52" />
 
             <RadioButton
                 android:id="@+id/card_answer3"
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/half_margin"
                 android:onClick="onRadioButtonClicked"
-                android:text="@string/answer33"/>
+                android:text="@string/answer53"/>
 
             <RadioButton
                 android:id="@+id/card_answer4"
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/half_margin"
                 android:onClick="onRadioButtonClicked"
-                android:text="@string/answer34" />
+                android:text="@string/answer54" />
 
         </RadioGroup>
 
