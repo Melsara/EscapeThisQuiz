@@ -1,21 +1,21 @@
 <resources>
-    <string name="app_name">Escape This Quiz</string>
-    <string name="instructions">Instructions</string>
-    <string name="instruction_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu</string>
-    <string name="button_start">Start</string>
-    <string name="result">Your result is</string>
-    <string name="result_game">0 out of 10</string>
-    <string name="title_activity_quiz_card">Quiz</string>
+	<string name="app_name">Escape This Quiz</string>
+	<string name="instructions">Instructions</string>
+	<string name="instruction_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu</string>
+	<string name="button_start">Start</string>
+	<string name="result">Your result is</string>
+	<string name="result_game">0 out of 10</string>
+	<string name="title_activity_quiz_card">Quiz</string>
 	<string name="text1">Question 1/5</string>
 	<string name="text2">Question 2/5</string>
 	<string name="text3">Question 3/5</string>
 	<string name="text4">Question 4/5</string>
 	<string name="text5">Question 5/5</string>
-    <string name="question1">Solve the cryptogram</string>
-    <string name="question2">Solve the equation</string>
-    <string name="question3">Find the values</string>
-    <string name="question4">What is this?</string>
-    <string name="question5">Find the word</string>
+	<string name="question1">Solve the cryptogram</string>
+	<string name="question2">Solve the equation</string>
+	<string name="question3">Find the values</string>
+	<string name="question4">What is this?</string>
+	<string name="question5">Find the word</string>
 	<string name="answer11">Answer 11</string>
 	<string name="answer12">Answer 12</string>
 	<string name="answer13">Answer 13</string>
@@ -36,4 +36,10 @@
 	<string name="answer52">Answer 52</string>
 	<string name="answer53">Answer 53</string>
 	<string name="answer54">Answer 54</string>
-	</resources>
+	<string name="button_Back">Back</string>
+	<string name="button_Next">Next</string>
+	<string name="button_Submit">Submit</string>
+	<string name="result_title">Your Result</string>
+	<string name="result_outOf">out of</string>
+	<string name="button_restart">Restart</string>
+</resources>
