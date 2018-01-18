@@ -44,7 +44,8 @@
                 android:text="@string/question1"
                 android:textSize="30sp" />
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3"
