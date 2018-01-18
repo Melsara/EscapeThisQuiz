@@ -16,6 +16,7 @@ public class RecyclerActivityAdapter  extends RecyclerView.Adapter<RecyclerActiv
     public int size;
 
     public RecyclerActivityAdapter(List<SubActivityData> contactList) {
+        size = contactList.size();
         this.SubActivityData = contactList;
     }
 
@@ -36,7 +37,7 @@ public class RecyclerActivityAdapter  extends RecyclerView.Adapter<RecyclerActiv
         cardViewHolder.answer3.setText(ci.radioText3);
         cardViewHolder.answer4.setText(ci.radioText4);
         cardViewHolder.image.setImageResource(ci.image);
-        cardViewHolder.submit.setVisibility(View.VISIBLE);
+        cardViewHolder.submit.setVisibility(ci.submit);
 
     }
 
