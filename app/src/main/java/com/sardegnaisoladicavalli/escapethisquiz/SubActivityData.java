@@ -21,7 +21,7 @@ public class SubActivityData {
 
     protected static final String CARD_TEXT = "card text";
 
-    public SubActivityData(String question, String text, String answer1, String answer2, String answer3, String answer4, int image, int submit) {
+    public SubActivityData(String question, String text, String answer1, String answer2, String answer3, String answer4, int image, int submit, RadioButton rightAnswer, int pointRightAnswer) {
         this.text = text;
         this.question = question;
         this.radioText1 = answer1;
@@ -30,13 +30,8 @@ public class SubActivityData {
         this.radioText4 = answer4;
         this.image = image;
         this.submit = submit;
-    }
-
-    public SubActivityData(RadioButton rightAnswer, int pointRightAnswer) {
         this.rightAnswer = rightAnswer;
         this.pointRightAnswer = pointRightAnswer;
-
-
     }
 
 }
