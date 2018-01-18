@@ -1,6 +1,7 @@
 package com.sardegnaisoladicavalli.escapethisquiz;
 
 import android.widget.Button;
+import android.widget.RadioButton;
 
 /**
  * Created by Sara on 10/01/2018.
@@ -15,6 +16,8 @@ public class SubActivityData {
     protected String radioText4;
     protected int image;
     protected int submit;
+    protected RadioButton rightAnswer;
+    protected int pointRightAnswer;
 
     protected static final String CARD_TEXT = "card text";
 
@@ -27,6 +30,13 @@ public class SubActivityData {
         this.radioText4 = answer4;
         this.image = image;
         this.submit = submit;
+    }
+
+    public SubActivityData(RadioButton rightAnswer, int pointRightAnswer) {
+        this.rightAnswer = rightAnswer;
+        this.pointRightAnswer = pointRightAnswer;
+
+
     }
 
 }

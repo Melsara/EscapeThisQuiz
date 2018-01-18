@@ -33,7 +33,7 @@ public class RecyclerActivity extends AppCompatActivity {
         recList.setAdapter(ca);
         ca.notifyDataSetChanged();
         int cardNumber = ca.getItemCount();
-        if (cardNumber == 5) {
+        if (cardNumber == createList().size()) {
 
         }
 
@@ -53,6 +53,7 @@ public class RecyclerActivity extends AppCompatActivity {
 
         return aList;
     }
+
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
