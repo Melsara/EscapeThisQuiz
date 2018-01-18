@@ -66,40 +66,44 @@ public class QuizCard01 extends AppCompatActivity {
 
     public void makeQuestions(){
         questions[0] = new Question(
-                "Which of these astronomical objects are planets?",
-                "Earth",
-                "Pluto",
-                "Sun",
-                "Jupiter",
-                "EarthJupiter");
+                R.string.question1,
+                R.string.answer11,
+                R.string.answer12,
+                R.string.answer13,
+                R.string.answer14,
+                R.string.answer12);
 
         questions[1] = new Question(
-                "How old is Earth?",
-                "4.5 - 5 billions years old",
-                "6.000 years old",
-                "47 billions years old",
-                "1 billion years old",
-                "4.5 - 5 billions years old");
+                R.string.question2,
+                R.string.answer21,
+                R.string.answer22,
+                R.string.answer23,
+                R.string.answer24,
+                R.string.answer24);
 
         questions[2] = new Question(
-                "What is name of our galaxy?",
-                "milky way"
+                R.string.question3,
+                R.string.answer31,
+                R.string.answer32,
+                R.string.answer33,
+                R.string.answer34,
+                R.string.answer31
         );
         questions[3] = new Question(
-                "Answer to the Ultimate Question of Life, the Universe, and Everything",
-                "What?!",
-                "42",
-                "Agent 00x",
-                "God is the answer",
-                "42");
+                R.string.question4,
+                R.string.answer41,
+                R.string.answer42,
+                R.string.answer43,
+                R.string.answer44,
+                R.string.answer42);
 
         questions[4] = new Question(
-                "Who wrote \"On the Revolutions of the Heavenly Spheres\" ?",
-                "Johannes Kepler",
-                "Edwin Hubble",
-                "Nicolaus Copernicus",
-                "Isaac Newton",
-                "Nicolaus Copernicus");
+                R.string.question5,
+                R.string.answer51,
+                R.string.answer52,
+                R.string.answer53,
+                R.string.answer54,
+                R.string.answer51);
 
 
     }
