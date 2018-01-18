@@ -50,6 +50,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="@dimen/margin"
                 android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
                 android:layout_weight="1"
                 android:text="@string/question1"
                 android:textSize="30sp" />
@@ -99,13 +100,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/margin"
+                android:layout_margin="@dimen/margin"
+                android:layout_centerHorizontal="true"
                 android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="@string/button_Submit"
                 android:onClick="onSubmitButtonClicked"
-                android:text="Submit"
                 android:textColor="@color/colorPrimaryDark"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
         </LinearLayout>
     </ScrollView>
