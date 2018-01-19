@@ -8,22 +8,18 @@ import android.widget.RadioButton;
 
 public class QuizCard04 extends AppCompatActivity {
 
-    public int quizResult4 = 0;
+    public int score = RightAnswers.score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_card_04);
-        Intent intent = getIntent();
+        Intent card04 = getIntent();
+        final Bundle bundle = card04.getExtras();
+        score = bundle.getInt("score");
 
     }
 
-    public int gotRightAnswer() {
-
-        quizResult4 = quizResult4 + 1;
-        return quizResult4;
-
-    }
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
@@ -31,39 +27,27 @@ public class QuizCard04 extends AppCompatActivity {
 
         // Check which radio button was clicked
         switch (view.getId()) {
-            case R.id.card_answer1:
-                if (checked)
-
-                break;
             case R.id.card_answer2:
                 if (checked)
 
-                    gotRightAnswer();
+                    score += 1;
 
                     break;
 
-            case R.id.card_answer3:
-                if (checked)
-
-                    break;
-
-            case R.id.card_answer4:
-                if (checked)
-
-
-
-                    break;
         }
     }
 
     public void onNextButtonClicked (View view) {
-        Intent intent = new Intent(this, QuizCard05.class);
-        startActivity(intent);
+        Intent card05 = new Intent(this, QuizCard05.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("score", score);
+        card05.putExtras(bundle);
+        startActivity(card05);
     }
 
-    public void onBackButtonClicked(View view) {
+/*    public void onBackButtonClicked(View view) {
         Intent intent = new Intent(this, QuizCard03.class);
         startActivity(intent);
-    }
+    }*/
 
 }

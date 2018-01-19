@@ -8,22 +8,18 @@ import android.widget.RadioButton;
 
 public class QuizCard02 extends AppCompatActivity {
 
-    public int quizResult2 = 0;
+    public int score = RightAnswers.score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_card_02);
-        Intent intent = getIntent();
+        Intent card02 = getIntent();
+        final Bundle bundle = card02.getExtras();
+        score = bundle.getInt("score");
 
     }
 
-    public int gotRightAnswer() {
-
-        quizResult2 = quizResult2 + 1;
-        return quizResult2;
-
-    }
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
@@ -31,37 +27,29 @@ public class QuizCard02 extends AppCompatActivity {
 
         // Check which radio button was clicked
         switch (view.getId()) {
-            case R.id.card_answer1:
-                if (checked)
-
-                    break;
-            case R.id.card_answer2:
-                if (checked)
-
-                    break;
-
-            case R.id.card_answer3:
-                if (checked)
-
-                    break;
-
             case R.id.card_answer4:
                 if (checked)
 
-                    gotRightAnswer();
+                    score += 1;
 
                 break;
         }
     }
 
     public void onNextButtonClicked (View view) {
-        Intent intent = new Intent(this, QuizCard03.class);
-        startActivity(intent);
+        Intent card03 = new Intent(this, QuizCard03.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("score", score);
+        card03.putExtras(bundle);
+        startActivity(card03);
     }
 
-    public void onBackButtonClicked(View view) {
-        Intent intent = new Intent(this, QuizCard01.class);
-        startActivity(intent);
-    }
+/*    public void onBackButtonClicked(View view) {
+        Intent card01 = new Intent(this, QuizCard01.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("score", score);
+        card01.putExtras(bundle);
+        startActivity(card01);
+    }*/
 
 }

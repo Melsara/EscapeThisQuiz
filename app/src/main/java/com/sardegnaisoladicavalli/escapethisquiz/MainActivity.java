@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
+import static com.sardegnaisoladicavalli.escapethisquiz.RightAnswers.score;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startQuiz (View view) {
-        Intent intent = new Intent(this, QuizCard01.class);
-        startActivity(intent);
+        Intent card01 = new Intent(this, QuizCard01.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("score", score);
+        card01.putExtras(bundle);
+        startActivity(card01);
     }
 }

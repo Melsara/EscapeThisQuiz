@@ -8,22 +8,18 @@ import android.widget.RadioButton;
 
 public class QuizCard03 extends AppCompatActivity {
 
-    public int quizResult3 = 0;
+    public int score = RightAnswers.score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_card_03);
-        Intent intent = getIntent();
+        Intent card03 = getIntent();
+        final Bundle bundle = card03.getExtras();
+        score = bundle.getInt("score");
 
     }
 
-    public int gotRightAnswer() {
-
-        quizResult3 = quizResult3 + 1;
-        return quizResult3;
-
-    }
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
@@ -34,36 +30,26 @@ public class QuizCard03 extends AppCompatActivity {
             case R.id.card_answer1:
                 if (checked)
 
-                    gotRightAnswer();
+                    score += 1;
 
                     break;
-            case R.id.card_answer2:
-                if (checked)
-
-                    break;
-
-            case R.id.card_answer3:
-                if (checked)
-
-                    break;
-
-            case R.id.card_answer4:
-                if (checked)
-
-
-
-                break;
         }
     }
 
     public void onNextButtonClicked (View view) {
-        Intent intent = new Intent(this, QuizCard04.class);
-        startActivity(intent);
+        Intent card04 = new Intent(this, QuizCard04.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("score", score);
+        card04.putExtras(bundle);
+        startActivity(card04);
     }
 
-    public void onBackButtonClicked(View view) {
-        Intent intent = new Intent(this, QuizCard02.class);
-        startActivity(intent);
-    }
+ /*   public void onBackButtonClicked(View view) {
+        Intent card02 = new Intent(this, QuizCard02.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("score", score);
+        card02.putExtras(bundle);
+        startActivity(card02);
+    }*/
 
 }
