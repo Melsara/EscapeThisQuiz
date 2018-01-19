@@ -43,4 +43,6 @@
     <string name="result_outOf">out of</string>
     <string name="button_restart">Restart</string>
 	<string name="button_quit">Quit</string>
+	<string name="toast_win">You beat the Quiz!</string>
+	<string name="toast_lose">The Quiz beat you!</string>
 </resources>

@@ -1,11 +1,13 @@
 package com.sardegnaisoladicavalli.escapethisquiz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Result extends AppCompatActivity {
 
@@ -31,6 +33,15 @@ public class Result extends AppCompatActivity {
                 System.exit(0);
             }
         });
+
+        if (score >= 3) {
+
+            displayToast(getString(R.string.toast_win));
+
+        } else {
+
+            displayToast(getString(R.string.toast_lose));
+        }
     }
 
     @Override
@@ -60,5 +71,12 @@ public class Result extends AppCompatActivity {
     public void onRestartButtonClicked (View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void displayToast(CharSequence toastText) {
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_LONG;
+        Toast toast = Toast.makeText(context, toastText, duration);
+        toast.show();
     }
 }
