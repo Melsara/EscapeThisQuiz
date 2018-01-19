@@ -81,6 +81,18 @@
         android:text="@string/button_restart"
         android:textColor="@color/colorPrimaryDark"
         android:visibility="visible"/>
+    <Button
+        android:id="@+id/button_quit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="@string/button_quit"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark" />
 
 </LinearLayout>
 

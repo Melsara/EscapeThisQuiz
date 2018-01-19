@@ -42,4 +42,5 @@
 	<string name="result_title">Your Result is</string>
     <string name="result_outOf">out of</string>
     <string name="button_restart">Restart</string>
+	<string name="button_quit">Quit</string>
 </resources>

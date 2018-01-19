@@ -75,6 +75,19 @@
             android:layout_marginTop="@dimen/half_margin"
             android:text="@string/instruction_text" />
 
+        <Button
+            android:id="@+id/button_quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/half_margin"
+            android:text="@string/button_quit"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"/>
+
     </LinearLayout>
+
+
 
 </ScrollView>
