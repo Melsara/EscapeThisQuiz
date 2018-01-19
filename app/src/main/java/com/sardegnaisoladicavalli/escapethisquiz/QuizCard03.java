@@ -20,6 +20,13 @@ public class QuizCard03 extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed()
+    {
+
+        /*super.onBackPressed();*/
+    }
+
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
