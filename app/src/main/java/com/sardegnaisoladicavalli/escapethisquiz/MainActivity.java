@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     public void startQuiz (View view) {
         Intent card01 = new Intent(this, QuizCard01.class);
         Bundle bundle = new Bundle();

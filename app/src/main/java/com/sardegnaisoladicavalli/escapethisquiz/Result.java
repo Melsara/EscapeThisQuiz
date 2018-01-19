@@ -40,6 +40,23 @@ public class Result extends AppCompatActivity {
         /*super.onBackPressed();*/
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        // Save UI state changes to the savedInstanceState.
+        // This bundle will be passed to onCreate if the process is
+        // killed and restarted.
+        savedInstanceState.putInt("score", score);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore UI state from the savedInstanceState.
+        // This bundle has also been passed to onCreate.
+        int  score = savedInstanceState.getInt("totalPens");
+    }
+
     public void onRestartButtonClicked (View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

@@ -43,6 +43,23 @@ public class QuizCard01 extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        // Save UI state changes to the savedInstanceState.
+        // This bundle will be passed to onCreate if the process is
+        // killed and restarted.
+        savedInstanceState.putInt("score", score);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore UI state from the savedInstanceState.
+        // This bundle has also been passed to onCreate.
+        int  score = savedInstanceState.getInt("totalPens");
+    }
+
     public void onNextButtonClicked (View view) {
         Intent card02 = new Intent(this, QuizCard02.class);
         Bundle bundle = new Bundle();
