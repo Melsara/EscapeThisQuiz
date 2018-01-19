@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/margin"
-    android:orientation="vertical"
     tools:context="com.sardegnaisoladicavalli.escapethisquiz.Result">
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <ImageView
-        android:layout_width="100dp"
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/margin"
+        android:layout_gravity="center_vertical"
         android:src="@drawable/dragon" />
 
     <TextView
         android:id="@+id/result_title"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_margin="@dimen/margin"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="5"
         android:gravity="center"
         android:text="@string/result_title"
         android:textSize="30sp" />
@@ -29,8 +33,9 @@
     <LinearLayout
         android:id="@+id/result_score"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_title"
+        android:layout_marginBottom="@dimen/margin"
         android:orientation="horizontal">
 
         <TextView
@@ -38,7 +43,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_marginTop="@dimen/margin"
             android:layout_weight="1"
             android:gravity="center"
             android:text="0"
@@ -49,7 +53,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_marginTop="@dimen/margin"
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/result_outOf"
@@ -60,7 +63,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_marginTop="@dimen/margin"
             android:layout_weight="1"
             android:gravity="center"
             android:text="5"
@@ -71,28 +73,32 @@
     <Button
         android:id="@+id/button_submit"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_score"
         android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/margin"
-        android:layout_weight="2"
         android:background="@color/colorAccent"
         android:gravity="center"
         android:onClick="onRestartButtonClicked"
         android:text="@string/button_restart"
         android:textColor="@color/colorPrimaryDark"
         android:visibility="visible"/>
-    <Button
-        android:id="@+id/button_quit"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginRight="@dimen/margin"
-        android:layout_marginBottom="@dimen/margin"
-        android:text="@string/button_quit"
-        android:background="@color/colorAccent"
-        android:textColor="@color/colorPrimaryDark" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/button_quit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_submit"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:background="@color/colorAccent"
+            android:text="@string/button_quit"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+
+</ScrollView>
 
