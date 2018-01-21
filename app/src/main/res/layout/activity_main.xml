@@ -15,6 +15,15 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/half_margin"
+            android:text="@string/app_name"
+            android:layout_gravity="center"
+            android:textSize="@dimen/big_title_font_size" />
+
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -34,32 +43,6 @@
             android:textColor="@color/colorPrimaryDark"
             android:onClick="startQuiz"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin"
-            android:layout_marginTop="@dimen/half_margin"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/result"
-            android:textSize="@dimen/title_font_size" />
-
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin"
-            android:layout_marginTop="@dimen/half_margin"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/result_game"
-            android:textSize="@dimen/title_font_size" />
-
-        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
