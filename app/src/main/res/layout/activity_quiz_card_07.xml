@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    app:cardCornerRadius="@dimen/margin"
+    android:layout_margin="@dimen/margin"
     android:orientation="vertical"
-    tools:context="com.sardegnaisoladicavalli.escapethisquiz.QuizCard07"
-    android:layout_margin="@dimen/margin">
+    app:cardCornerRadius="@dimen/margin"
+    tools:context="com.sardegnaisoladicavalli.escapethisquiz.QuizCard07">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_margin="@dimen/margin">
+        android:layout_margin="@dimen/margin"
+        android:orientation="vertical">
 
 
         <TextView
             android:id="@+id/card_text"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:text="@string/text5"
-            android:layout_gravity="center_horizontal"
             android:textSize="30sp" />
 
 
@@ -30,10 +30,10 @@
             android:id="@+id/card_image"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
             android:layout_marginTop="@dimen/half_margin"
+            android:layout_weight="3"
             android:background="@color/colorAccent"
-            android:src="@drawable/mirror"/>
+            android:src="@drawable/mirror" />
 
 
         <TextView
@@ -41,60 +41,60 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"
             android:layout_marginTop="@dimen/margin"
+            android:layout_weight="1"
             android:text="@string/question5"
             android:textSize="30sp" />
 
-            <CheckBox
-                android:id="@+id/card_answer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
-                android:text="@string/answer51" />
+        <CheckBox
+            android:id="@+id/card_answer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/answer71" />
 
-            <CheckBox
-                android:id="@+id/card_answer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/half_margin"
-                android:onClick="onCheckboxClicked"
-                android:text="@string/answer52" />
+        <CheckBox
+            android:id="@+id/card_answer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/half_margin"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/answer72" />
 
-            <CheckBox
-                android:id="@+id/card_answer3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/half_margin"
-                android:onClick="onCheckboxClicked"
-                android:text="@string/answer53"/>
+        <CheckBox
+            android:id="@+id/card_answer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/half_margin"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/answer73" />
 
-            <CheckBox
-                android:id="@+id/card_answer4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/half_margin"
-                android:onClick="onCheckboxClicked"
-                android:text="@string/answer54" />
+        <CheckBox
+            android:id="@+id/card_answer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/half_margin"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/answer74" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin">
+            android:layout_marginTop="@dimen/margin"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button_back"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin"
                 android:layout_weight="1"
                 android:background="@color/colorAccent"
                 android:gravity="center"
                 android:text="@string/button_Back"
-                android:layout_marginRight="@dimen/margin"
                 android:textColor="@color/colorPrimaryDark"
                 android:visibility="invisible" />
 
@@ -102,12 +102,12 @@
                 android:id="@+id/button_submit"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_centerHorizontal="true"
+                android:layout_weight="1"
                 android:background="@color/colorAccent"
                 android:gravity="center"
-                android:text="@string/button_Submit"
                 android:onClick="onSubmitButtonClicked"
+                android:text="@string/button_Submit"
                 android:textColor="@color/colorPrimaryDark"
                 android:visibility="visible" />
 
@@ -115,9 +115,9 @@
                 android:id="@+id/button_forward"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
                 android:layout_weight="1"
                 android:background="@color/colorAccent"
-                android:layout_marginLeft="@dimen/margin"
                 android:gravity="center"
                 android:text="@string/button_Next"
                 android:textColor="@color/colorPrimaryDark"
