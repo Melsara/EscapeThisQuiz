@@ -48,12 +48,14 @@ public class QuizCard01 extends AppCompatActivity {
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putBundle("bundle", bundle);
+        savedInstanceState.putInt("score", score);
     }
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        int bundle = savedInstanceState.getInt("bundle");
+        bundle = savedInstanceState.getBundle("bundle");
+        score = savedInstanceState.getInt("score");
     }
 
     public void onNextButtonClicked (View view) {
