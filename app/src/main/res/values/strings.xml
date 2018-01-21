@@ -12,12 +12,14 @@
     <string name="text4">Question 4/7</string>
     <string name="text5">Question 5/7</string>
     <string name="text6">Question 6/7</string>
+    <string name="text7">Question 7/7</string>
     <string name="question1">Solve the cryptogram</string>
     <string name="question2">Solve the equation</string>
     <string name="question3">Find the values</string>
     <string name="question4">What is this?</string>
     <string name="question5">Find the word</string>
     <string name="question6">Open the padlock</string>
+    <string name="question7">Question 7</string>
     <string name="answer11">And into the forest I go, to lose my mind and find my soul</string>
     <string name="answer12">You have to escape to survive, as you must survive to escape</string>
     <string name="answer13">Eat, sleep, play escape</string>

@@ -9,4 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 public class RightAnswers extends AppCompatActivity{
 
     public static final int score = 0;
+    public static final String name = "";
+
 }

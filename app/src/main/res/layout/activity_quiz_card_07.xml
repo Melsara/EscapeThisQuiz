@@ -22,7 +22,7 @@
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:text="@string/text5"
+            android:text="@string/text7"
             android:textSize="30sp" />
 
 
@@ -43,7 +43,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginTop="@dimen/margin"
             android:layout_weight="1"
-            android:text="@string/question5"
+            android:text="@string/question7"
             android:textSize="30sp" />
 
         <CheckBox

@@ -27,7 +27,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/text6"
+                android:text="@string/text7"
                 android:textSize="30sp" />
 
 
@@ -49,7 +49,7 @@
                 android:layout_marginTop="@dimen/margin"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/question6"
+                android:text="@string/question7"
                 android:textSize="30sp" />
 
             <CheckBox
@@ -113,7 +113,8 @@
                     android:gravity="center"
                     android:text="@string/button_Submit"
                     android:textColor="@color/colorPrimaryDark"
-                    android:visibility="invisible" />
+                    android:onClick="onSubmitButtonClicked"
+                    android:visibility="visible" />
 
                 <Button
                     android:id="@+id/button_forward"
@@ -125,7 +126,7 @@
                     android:gravity="center"
                     android:text="@string/button_Next"
                     android:textColor="@color/colorPrimaryDark"
-                    android:visibility="visible" />
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
