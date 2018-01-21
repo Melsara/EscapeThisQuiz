@@ -9,7 +9,7 @@ import android.widget.RadioButton;
 public class QuizCard01 extends AppCompatActivity {
 
     public int score = RightAnswers.score;
-    private static final int cardScore = RightAnswers.score;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,18 +47,13 @@ public class QuizCard01 extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        // Save UI state changes to the savedInstanceState.
-        // This bundle will be passed to onCreate if the process is
-        // killed and restarted.
-        savedInstanceState.putInt("score", cardScore);
+        savedInstanceState.putBundle("bundle", bundle);
     }
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        // Restore UI state from the savedInstanceState.
-        // This bundle has also been passed to onCreate.
-        int  cardScore = savedInstanceState.getInt("score");
+        int bundle = savedInstanceState.getInt("bundle");
     }
 
     public void onNextButtonClicked (View view) {
