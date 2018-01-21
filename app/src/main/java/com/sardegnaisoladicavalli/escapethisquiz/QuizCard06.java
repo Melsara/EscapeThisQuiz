@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
 
-public class QuizCard05 extends AppCompatActivity {
+public class QuizCard06 extends AppCompatActivity {
 
     public int score = RightAnswers.score;
     Bundle bundle;
@@ -14,9 +15,9 @@ public class QuizCard05 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_card_05);
-        Intent card05 = getIntent();
-        final Bundle bundle = card05.getExtras();
+        setContentView(R.layout.activity_quiz_card_06);
+        Intent card06 = getIntent();
+        final Bundle bundle = card06.getExtras();
         score = bundle.getInt("score");
 
     }
@@ -43,27 +44,30 @@ public class QuizCard05 extends AppCompatActivity {
     }
 
 
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
+    public void gotRightPadlockCombination () {
+        EditText editText = (EditText) findViewById(R.id.padlock_comb);
+        String userComb = editText.getText().toString();
 
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.card_answer3:
-                if (checked)
 
-                    score += 1;
+        if (userComb.equalsIgnoreCase("ADBC")) {
 
-                    break;
+            score += 1;
+
+
+        } else {
+
+
         }
+
     }
 
     public void onNextButtonClicked (View view) {
-        Intent card06 = new Intent(this, QuizCard06.class);
+        gotRightPadlockCombination();
+        Intent card07 = new Intent(this, QuizCard07.class);
         Bundle bundle = new Bundle();
         bundle.putInt("score", score);
-        card06.putExtras(bundle);
-        startActivity(card06);
+        card07.putExtras(bundle);
+        startActivity(card07);
     }
 
 
