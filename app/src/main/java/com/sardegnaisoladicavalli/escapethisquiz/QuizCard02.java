@@ -57,7 +57,7 @@ public class QuizCard02 extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         // Restore UI state from the savedInstanceState.
         // This bundle has also been passed to onCreate.
-        int  score = savedInstanceState.getInt("totalPens");
+        int  score = savedInstanceState.getInt("score");
     }
 
     public void onNextButtonClicked (View view) {
