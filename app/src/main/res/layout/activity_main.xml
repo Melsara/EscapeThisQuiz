@@ -31,6 +31,18 @@
             android:layout_margin="@dimen/margin"
             android:src="@drawable/dragon" />
 
+        <EditText
+            android:id="@+id/padlock_comb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/main_name"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/title_font_size" />
+
         <Button
             android:id="@+id/button_start"
             android:layout_width="match_parent"

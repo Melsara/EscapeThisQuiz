@@ -6,6 +6,7 @@
     <string name="result">Your result is</string>
     <string name="result_game">0 out of 10</string>
     <string name="title_activity_quiz_card">Quiz</string>
+    <string name="main_name">Enter your name to start</string>
     <string name="text1">Question 1/7</string>
     <string name="text2">Question 2/7</string>
     <string name="text3">Question 3/7</string>
