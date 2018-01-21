@@ -32,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed()
+    {
+
+        /*super.onBackPressed();*/
+    }
+
 
     public void startQuiz (View view) {
         Intent card01 = new Intent(this, QuizCard01.class);
