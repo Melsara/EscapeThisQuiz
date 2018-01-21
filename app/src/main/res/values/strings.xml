@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Escape This Quiz</string>
-    <string name="instructions">Instructions</string>
-    <string name="instruction_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu</string>
+    <string name="instructions">What is this game?</string>
+    <string name="instruction_text">An escape room is a physical adventure game in which players solve a series of puzzles and riddles using clues, hints and strategy to complete the objectives at hand. Players are given a set time limit to unveil the secret plot which is hidden within the rooms. \nYou will be playing an escape-style quiz, with no back button. Find your way out!</string>
     <string name="button_start">Start</string>
     <string name="result">Your result is</string>
     <string name="result_game">0 out of 10</string>
