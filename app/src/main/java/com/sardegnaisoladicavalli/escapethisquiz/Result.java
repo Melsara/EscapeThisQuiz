@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class Result extends AppCompatActivity {
 
     public int score = RightAnswers.score;
+    public String name;
     Bundle bundle;
 
     @Override
@@ -21,6 +22,7 @@ public class Result extends AppCompatActivity {
         Intent result = getIntent();
         final Bundle bundle = result.getExtras();
         score = bundle.getInt("score");
+        name = bundle.getString("name");
 
         TextView actualRes = (TextView) findViewById(R.id.result_actualRes);
         actualRes.setText(Integer.toString(score));
@@ -41,11 +43,11 @@ public class Result extends AppCompatActivity {
 
         if (score >= 3) {
 
-            displayToast(getString(R.string.toast_win));
+            displayToast(name + ", " + getString(R.string.toast_win));
 
         } else {
 
-            displayToast(getString(R.string.toast_lose));
+            displayToast(name + ", " + getString(R.string.toast_lose));
         }
     }
 

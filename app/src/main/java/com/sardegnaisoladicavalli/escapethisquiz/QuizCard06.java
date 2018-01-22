@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 public class QuizCard06 extends AppCompatActivity {
 
     public int score = RightAnswers.score;
+    public String name;
     Bundle bundle;
 
     @Override
@@ -18,6 +19,7 @@ public class QuizCard06 extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_card_06);
         Intent card06 = getIntent();
         final Bundle bundle = card06.getExtras();
+        name = bundle.getString("name");
         score = bundle.getInt("score");
 
     }
@@ -66,6 +68,7 @@ public class QuizCard06 extends AppCompatActivity {
         Intent card07 = new Intent(this, QuizCard07.class);
         Bundle bundle = new Bundle();
         bundle.putInt("score", score);
+        bundle.putString("name", name);
         card07.putExtras(bundle);
         startActivity(card07);
     }

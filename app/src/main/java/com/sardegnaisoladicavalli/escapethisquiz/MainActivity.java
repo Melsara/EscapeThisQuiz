@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
+import static com.sardegnaisoladicavalli.escapethisquiz.RightAnswers.name;
 import static com.sardegnaisoladicavalli.escapethisquiz.RightAnswers.score;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,8 +43,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void startQuiz (View view) {
+        EditText insertName = (EditText) findViewById(R.id.edit_text_name);
+        String userName = insertName.getText().toString();
+
         Intent card01 = new Intent(this, QuizCard01.class);
         Bundle bundle = new Bundle();
+        bundle.putString("name", userName);
         bundle.putInt("score", score);
         card01.putExtras(bundle);
         startActivity(card01);
