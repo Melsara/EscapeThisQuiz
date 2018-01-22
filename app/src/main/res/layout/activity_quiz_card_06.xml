@@ -56,7 +56,7 @@
             android:inputType="text"
             android:lines="1"
             android:maxLines="1"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/text_font_size" />
 
         <LinearLayout
