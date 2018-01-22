@@ -69,12 +69,4 @@ public class QuizCard02 extends AppCompatActivity {
         startActivity(card03);
     }
 
-/*    public void onBackButtonClicked(View view) {
-        Intent card01 = new Intent(this, QuizCard01.class);
-        Bundle bundle = new Bundle();
-        bundle.putInt("score", score);
-        card01.putExtras(bundle);
-        startActivity(card01);
-    }*/
-
 }

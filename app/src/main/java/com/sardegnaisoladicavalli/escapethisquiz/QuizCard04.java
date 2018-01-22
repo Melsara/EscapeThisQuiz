@@ -70,9 +70,4 @@ public class QuizCard04 extends AppCompatActivity {
         startActivity(card05);
     }
 
-/*    public void onBackButtonClicked(View view) {
-        Intent intent = new Intent(this, QuizCard03.class);
-        startActivity(intent);
-    }*/
-
 }
