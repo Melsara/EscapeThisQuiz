@@ -41,7 +41,7 @@ public class Result extends AppCompatActivity {
             }
         });
 
-        if (score >= 3) {
+        if (score >= 4) {
 
             displayToast(name + ", " + getString(R.string.toast_win));
 
