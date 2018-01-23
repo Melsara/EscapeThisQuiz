@@ -121,7 +121,7 @@
                     android:gravity="center"
                     android:text="@string/button_Submit"
                     android:textColor="@color/colorPrimaryDark"
-                    android:visibility="visible" />
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/button_forward"
@@ -134,7 +134,7 @@
                     android:onClick="onNextButtonClicked"
                     android:text="@string/button_Next"
                     android:textColor="@color/colorPrimaryDark"
-                    android:visibility="invisible" />
+                    android:visibility="visible" />
 
             </LinearLayout>
 
