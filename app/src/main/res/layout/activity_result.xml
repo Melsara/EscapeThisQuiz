@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context="com.sardegnaisoladicavalli.escapethisquiz.Result">
 
 
@@ -12,94 +12,102 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/margin">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="@dimen/margin"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/dragon" />
-
-    <TextView
-        android:id="@+id/result_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
-        android:layout_margin="@dimen/margin"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:text="@string/result_title"
-        android:textSize="30sp" />
-
-    <LinearLayout
-        android:id="@+id/result_score"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/result_title"
-        android:layout_marginBottom="@dimen/margin"
-        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin"
+            android:src="@drawable/dragon" />
 
         <TextView
-            android:id="@+id/result_actualRes"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="0"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/result_outOf"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/result_outOf"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/result_maxScore"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/result_totalQuestions"
-            android:textSize="30sp" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/button_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/result_score"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/margin"
-        android:background="@color/colorAccent"
-        android:gravity="center"
-        android:onClick="onRestartButtonClicked"
-        android:text="@string/button_restart"
-        android:textColor="@color/colorPrimaryDark"
-        android:visibility="visible"/>
-
-        <Button
-            android:id="@+id/button_quit"
+            android:id="@+id/result_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/button_submit"
+            android:layout_below="@+id/logo"
             android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:text="@string/result_title"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/result_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_title"
             android:layout_marginBottom="@dimen/margin"
-            android:layout_marginLeft="@dimen/margin"
-            android:layout_marginRight="@dimen/margin"
-            android:background="@color/colorAccent"
-            android:text="@string/button_quit"
-            android:textColor="@color/colorPrimaryDark" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/result_actualRes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/result_outOf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/result_outOf"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/result_maxScore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/result_totalQuestions"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_score"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding">
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/result_score"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="onRestartButtonClicked"
+                android:text="@string/button_restart"
+                android:textColor="@color/colorPrimaryDark"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button_quit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_submit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:background="@color/colorAccent"
+                android:text="@string/button_quit"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
 
     </RelativeLayout>
-
 
 </ScrollView>
 
