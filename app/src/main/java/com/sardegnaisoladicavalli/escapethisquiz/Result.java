@@ -52,10 +52,10 @@ public class Result extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
-
+    public void onBackPressed() {
+        displayToast(getString(R.string.toast_noBack));
         /*super.onBackPressed();*/
+
     }
 
     @Override

@@ -1,10 +1,12 @@
 package com.sardegnaisoladicavalli.escapethisquiz;
 
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class QuizCard03 extends AppCompatActivity {
 
@@ -24,9 +26,8 @@ public class QuizCard03 extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
-
+    public void onBackPressed() {
+        displayToast(getString(R.string.toast_noBack));
         /*super.onBackPressed();*/
     }
 
@@ -42,7 +43,7 @@ public class QuizCard03 extends AppCompatActivity {
 
                     score += 1;
 
-                    break;
+                break;
         }
     }
 
@@ -60,13 +61,20 @@ public class QuizCard03 extends AppCompatActivity {
         score = savedInstanceState.getInt("score");
     }
 
-    public void onNextButtonClicked (View view) {
+    public void onNextButtonClicked(View view) {
         Intent card04 = new Intent(this, QuizCard04.class);
         Bundle bundle = new Bundle();
         bundle.putInt("score", score);
         bundle.putString("name", name);
         card04.putExtras(bundle);
         startActivity(card04);
+    }
+
+    public void displayToast(CharSequence toastText) {
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, toastText, duration);
+        toast.show();
     }
 
 }

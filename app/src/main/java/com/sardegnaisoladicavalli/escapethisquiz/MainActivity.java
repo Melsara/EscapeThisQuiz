@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 import static com.sardegnaisoladicavalli.escapethisquiz.RightAnswers.name;
@@ -37,9 +38,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
-
+    public void onBackPressed() {
+        displayToast(getString(R.string.toast_noBack));
         /*super.onBackPressed();*/
     }
 
@@ -60,5 +60,12 @@ public class MainActivity extends AppCompatActivity {
         bundle.putInt("score", score);
         card01.putExtras(bundle);
         startActivity(card01);
+    }
+
+    public void displayToast(CharSequence toastText) {
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, toastText, duration);
+        toast.show();
     }
 }

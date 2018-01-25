@@ -57,4 +57,5 @@
     <string name="button_quitMain">Quit, it\'s too hard for me</string>
     <string name="toast_win">you beat the Quiz!</string>
     <string name="toast_lose">the Quiz beat you!</string>
+    <string name="toast_noBack">You cannot escape!\n Your only choice is to look forward.</string>
 </resources>
