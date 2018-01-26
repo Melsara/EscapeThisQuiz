@@ -49,6 +49,7 @@
     <string name="button_Back">Back</string>
     <string name="button_Next">Next</string>
     <string name="button_Submit">Submit</string>
+    <string name="button_share">Share</string>
     <string name="result_title">Your Result is</string>
     <string name="result_outOf">out of</string>
     <string name="result_totalQuestions">7</string>

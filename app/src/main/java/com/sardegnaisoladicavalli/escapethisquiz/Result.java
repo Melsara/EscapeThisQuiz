@@ -83,4 +83,14 @@ public class Result extends AppCompatActivity {
         Toast toast = Toast.makeText(context, toastText, duration);
         toast.show();
     }
+
+    public void onShareButtonClicked (View view) {{
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Escape this Quiz\n" + name + "\'s result is " + score);
+            if (sharingIntent.resolveActivity(getPackageManager()) != null) {
+                startActivity(Intent.createChooser(sharingIntent,"Share you result using"));
+            }
+        }
+    }
 }
