@@ -13,6 +13,8 @@ public class QuizCard03 extends AppCompatActivity {
     public int score = RightAnswers.score;
     public String name;
     Bundle bundle;
+    final String SCORE_KEY = "score_key";
+    final String NAME_KEY = "name_key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +22,8 @@ public class QuizCard03 extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_card_03);
         Intent card03 = getIntent();
         final Bundle bundle = card03.getExtras();
-        name = bundle.getString("name");
-        score = bundle.getInt("score");
+        name = bundle.getString(NAME_KEY);
+        score = bundle.getInt(SCORE_KEY);
 
     }
 
@@ -64,8 +66,8 @@ public class QuizCard03 extends AppCompatActivity {
     public void onNextButtonClicked(View view) {
         Intent card04 = new Intent(this, QuizCard04.class);
         Bundle bundle = new Bundle();
-        bundle.putInt("score", score);
-        bundle.putString("name", name);
+        bundle.putInt(SCORE_KEY, score);
+        bundle.putString(NAME_KEY, name);
         card04.putExtras(bundle);
         startActivity(card04);
     }

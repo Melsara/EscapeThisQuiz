@@ -14,6 +14,8 @@ public class Result extends AppCompatActivity {
     public int score = RightAnswers.score;
     public String name;
     Bundle bundle;
+    final String SCORE_KEY = "score_key";
+    final String NAME_KEY = "name_key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +23,8 @@ public class Result extends AppCompatActivity {
         setContentView(R.layout.activity_result);
         Intent result = getIntent();
         final Bundle bundle = result.getExtras();
-        score = bundle.getInt("score");
-        name = bundle.getString("name");
+        score = bundle.getInt(SCORE_KEY);
+        name = bundle.getString(NAME_KEY);
 
         TextView actualRes = (TextView) findViewById(R.id.result_actualRes);
         actualRes.setText(Integer.toString(score));

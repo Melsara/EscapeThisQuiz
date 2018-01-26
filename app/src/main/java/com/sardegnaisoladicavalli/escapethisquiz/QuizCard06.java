@@ -14,6 +14,8 @@ public class QuizCard06 extends AppCompatActivity {
     public int score = RightAnswers.score;
     public String name;
     Bundle bundle;
+    final String SCORE_KEY = "score_key";
+    final String NAME_KEY = "name_key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +23,8 @@ public class QuizCard06 extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_card_06);
         Intent card06 = getIntent();
         final Bundle bundle = card06.getExtras();
-        name = bundle.getString("name");
-        score = bundle.getInt("score");
+        name = bundle.getString(NAME_KEY);
+        score = bundle.getInt(SCORE_KEY);
 
     }
 
@@ -52,7 +54,7 @@ public class QuizCard06 extends AppCompatActivity {
         String userComb = editText.getText().toString();
 
 
-        if (userComb.equalsIgnoreCase("ADBC")) {
+        if (userComb.equalsIgnoreCase("ADCB")) {
 
             score += 1;
 
@@ -68,8 +70,8 @@ public class QuizCard06 extends AppCompatActivity {
         gotRightPadlockCombination();
         Intent card07 = new Intent(this, QuizCard07.class);
         Bundle bundle = new Bundle();
-        bundle.putInt("score", score);
-        bundle.putString("name", name);
+        bundle.putInt(SCORE_KEY, score);
+        bundle.putString(NAME_KEY, name);
         card07.putExtras(bundle);
         startActivity(card07);
     }
