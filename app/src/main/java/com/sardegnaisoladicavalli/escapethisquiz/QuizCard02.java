@@ -13,8 +13,8 @@ public class QuizCard02 extends AppCompatActivity {
     public int score = RightAnswers.score;
     public String name;
     Bundle bundle;
-    final String SCORE_KEY = "score_key";
-    final String NAME_KEY = "name_key";
+    final static String SCORE_KEY = "score_key";
+    final static String NAME_KEY = "name_key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -16,8 +16,8 @@ import static com.sardegnaisoladicavalli.escapethisquiz.RightAnswers.score;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String SCORE_KEY = "score_key";
-    final String NAME_KEY = "name_key";
+    final static String SCORE_KEY = "score_key";
+    final static String NAME_KEY = "name_key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
