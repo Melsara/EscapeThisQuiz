@@ -27,11 +27,15 @@ public class QuizCard05 extends AppCompatActivity {
 
     }
 
+    /*Disabling back button. Displaying a toast, when user tap the button instead.*/
+
     @Override
     public void onBackPressed() {
         displayToast(getString(R.string.toast_noBack));
         /*super.onBackPressed();*/
     }
+
+    /*Saving and restoring states of the app*/
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -47,6 +51,7 @@ public class QuizCard05 extends AppCompatActivity {
         score = savedInstanceState.getInt("score");
     }
 
+    /*Defining correct answer in the card*/
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
@@ -63,6 +68,8 @@ public class QuizCard05 extends AppCompatActivity {
         }
     }
 
+    /*Launching next activity in the pipe*/
+
     public void onNextButtonClicked (View view) {
         Intent card06 = new Intent(this, QuizCard06.class);
         Bundle bundle = new Bundle();
@@ -71,6 +78,8 @@ public class QuizCard05 extends AppCompatActivity {
         card06.putExtras(bundle);
         startActivity(card06);
     }
+
+    /*Defining toast to display onBackPressed*/
 
     public void displayToast(CharSequence toastText) {
         Context context = getApplicationContext();

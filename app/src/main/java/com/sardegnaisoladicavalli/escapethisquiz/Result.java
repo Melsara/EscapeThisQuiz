@@ -29,6 +29,8 @@ public class Result extends AppCompatActivity {
         TextView actualRes = (TextView) findViewById(R.id.result_actualRes);
         actualRes.setText(Integer.toString(score));
 
+        /*Quit button functioning. Shut down the app if pressed*/
+
         Button quit = (Button) findViewById(R.id.button_quit);
         quit.setOnClickListener(new View.OnClickListener() {
 
@@ -43,6 +45,8 @@ public class Result extends AppCompatActivity {
             }
         });
 
+        /*Displaying different messages on a toast, according to user result*/
+
         if (score >= 4) {
 
             displayToast(name + ", " + getString(R.string.toast_win));
@@ -53,12 +57,16 @@ public class Result extends AppCompatActivity {
         }
     }
 
+    /*Disabling back button. Displaying a toast, when user tap the button instead.*/
+
     @Override
     public void onBackPressed() {
         displayToast(getString(R.string.toast_noBack));
         /*super.onBackPressed();*/
 
     }
+
+    /*Saving and restoring states of the app*/
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -74,10 +82,14 @@ public class Result extends AppCompatActivity {
         score = savedInstanceState.getInt("score");
     }
 
+    /*Restarting MainActivity after user finished*/
+
     public void onRestartButtonClicked (View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    /*Defining toast to display onBackPressed*/
 
     public void displayToast(CharSequence toastText) {
         Context context = getApplicationContext();
@@ -85,6 +97,8 @@ public class Result extends AppCompatActivity {
         Toast toast = Toast.makeText(context, toastText, duration);
         toast.show();
     }
+
+    /*Launching implicit intent to share user result across other apps*/
 
     public void onShareButtonClicked (View view) {{
         Intent sharingIntent = new Intent(Intent.ACTION_SEND);

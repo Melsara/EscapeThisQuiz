@@ -40,11 +40,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*Disabling back button. Displaying a toast, when user tap the button instead.*/
+
     @Override
     public void onBackPressed() {
         displayToast(getString(R.string.toast_noBack));
         /*super.onBackPressed();*/
     }
+
+    /*Method for moving the focus from EditText*/
 
     public void onClick(View view) {
         InputMethodManager imm = (InputMethodManager) view.getContext()
@@ -52,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
+    /*Start quiz. Launch Quiz Card 01*/
 
     public void startQuiz (View view) {
         EditText insertName = (EditText) findViewById(R.id.edit_text_name);
@@ -64,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         card01.putExtras(bundle);
         startActivity(card01);
     }
+
+    /*Defining toast to display onBackPressed*/
 
     public void displayToast(CharSequence toastText) {
         Context context = getApplicationContext();
