@@ -45,15 +45,15 @@ public class Result extends AppCompatActivity {
             }
         });
 
-        /*Displaying different messages on a toast, according to user result*/
+        /*Displaying different messages on a toast, according to user result. Also displaying the score on the toast.*/
 
         if (score >= 4) {
 
-            displayToast(name + ", " + getString(R.string.toast_win));
+            displayToast(name + ", " + getString(R.string.toast_win) + "\n" + getString(R.string.result_title) + " " + score + " " + getString(R.string.result_outOf) + " " + getString(R.string.result_totalQuestions));
 
         } else {
 
-            displayToast(name + ", " + getString(R.string.toast_lose));
+            displayToast(name + ", " + getString(R.string.toast_lose) + "\n" + getString(R.string.result_title) + " " + score + " " + getString(R.string.result_outOf) + " " + getString(R.string.result_totalQuestions));
         }
     }
 
