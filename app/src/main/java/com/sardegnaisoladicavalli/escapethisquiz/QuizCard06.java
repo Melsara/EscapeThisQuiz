@@ -56,7 +56,7 @@ public class QuizCard06 extends AppCompatActivity {
 
     public void gotRightPadlockCombination () {
         EditText editText = (EditText) findViewById(R.id.padlock_comb);
-        String userComb = editText.getText().toString();
+        String userComb = editText.getText().toString().trim();
 
 
         if (userComb.equalsIgnoreCase("ADCB")) {
